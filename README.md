@@ -1,2 +1,2 @@
 # portfolio
-Danijel Prebanić-portfolio page
+Danijel Prebanić - portfolio page
