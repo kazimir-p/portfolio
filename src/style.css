@@ -31,8 +31,9 @@ span {
     width: 60%;
 }
 .hero {
-    height:100vh;
+    min-height:100vh;
     background-color: darkorange;
+    /* background-color: rgb(0, 255, 72); */
 }
 .hamburger {
     display: none;
@@ -44,8 +45,18 @@ nav {
     display: flex;
     justify-content: space-between;
 }
+
+ #nav-en, #nav-cs {
+    display:flex;
+}
 #lang {
     margin: 4px;
+    color: seashell;
+}
+#lang:hover {
+    margin: 4px;
+    color:powderblue;
+    cursor: pointer;
 }
 #altLang:hover {
      color:powderblue;
@@ -70,8 +81,10 @@ li:last-of-type {
 }
 .frameimgsmall {
     position: absolute;
-    top: -50px;
-    left: 560px;
+    /* top: -50px; */
+    top: 10px;
+    /* left: 560px; */
+    left: 10px;
     height: 40px;
     width: 30px;
     background-color: rgba(204, 210, 20, 0.644);
@@ -82,8 +95,10 @@ li:last-of-type {
   }
   .frameimgbig {
     position: absolute;
-    top: -320px;
-    left: 560px;
+    /* top: -320px; */
+    /* left: 560px; */
+    top: -250px;
+    left: 20px;
     height: 260px;
     width: 220px;
     background-color: transparent;
@@ -91,6 +106,7 @@ li:last-of-type {
     background-size: cover;
     margin: 3px;
     cursor: pointer;
+    background-image:url("../img/superpancutbetter.png");
   }
 #headerSub {
     margin: 300px 100px 100px;
@@ -103,6 +119,13 @@ li:last-of-type {
     margin: 0 400px;
     font-weight: 200;
 }
+/* alter sub header */
+#headAndImgs {
+display: flex;
+}
+#headerSub-imgs {
+position: relative;
+}
 /*? popout gitHub */
 
 #invisibleGit {
@@ -114,11 +137,11 @@ li:last-of-type {
     overflow: hidden;
     height: 35px;
     background: transparent;
-    color: seashell; 
+    color: seashell;
 }
 .git-box, .git-text {
     font-size: 30px;
-    padding: 5px;
+    padding: 5px 5px 5px 0;
     align-items: center;
     display: flex;
 }
@@ -141,15 +164,16 @@ nav {
     height: 27%;
     flex-direction: row-reverse;
 }
+#list-vertical {
+   width: 70px;
+}
 ul li:last-of-type {
     display: block;
     padding: 50px 4px 4px 0;
     text-align: right;
     color: darkorange;
-}
-ul li:last-of-type a{
-    color: darkorange;
     font-size: 18px;
+    cursor: pointer;
 }
 .hamburger {
     display: block;
@@ -158,16 +182,19 @@ ul li:last-of-type a{
     color: white;
     font-size: 27px;
     padding: 10px 10px 6.5px 8px;
-    margin: 2px 3px;
+    margin: 10px;
     align-self: flex-start;
     z-index: 1;
-} 
+}
 .hamburger:hover {
     color:powderblue;
     cursor: pointer;
     transition: 0.3s ease-in-out;
 }
 #lang a {
+    display: none;
+}
+#lang  {
     display: none;
 }
 ul {
@@ -186,17 +213,26 @@ ul.show {
 ul.show li {
     padding-left: 5px;
 }
+ul li:last-of-type {
+    padding-top: 40px;
+    /* display: none; */
+}
+
 #headerSub {
     margin: 153.5px 100px 99.5px;
 }
+
 }
 @media only screen and (max-width: 1030px){
     .hamburger {
         padding: 5px 5px 3px 4px;
-        margin: 2px 3px;
         font-size: 20px;
-    
+
     }
+    #list-vertical {
+        width: 50px;
+     }
+
 ul.show {
     width: 140px;
     height: 150px;
@@ -209,9 +245,6 @@ ul li {
 }
 li:first-of-type button {
     display: none;
-}
-ul li:last-of-type {
-    padding-top: 40px;
 }
 ul li:last-of-type a{
     font-size: 16px;
@@ -229,13 +262,8 @@ h1 {
     flex-direction: column;
     margin-left: 50px;
 }
-.frameimgsmall {
-    top: -50px;
-    left: 488px;
-  }
   .frameimgbig {
-    top: -270px;
-    left: 488px;
+    top: -230px;
     height: 220px;
     width: 180px;
   }
@@ -251,12 +279,8 @@ h1 {
     font-size: 20px;
     margin-left: 300px;
 }
-.frameimgsmall {
-    left: 418px;
-}
 .frameimgbig {
-    top: -230px;
-    left: 418px;
+    top: -200px;
     height: 180px;
     width: 150px;
 }
@@ -268,32 +292,27 @@ h1 {
 h1 {
     font-size: 50px;
 }
-.frameimgsmall {
-    top: -50px;
-    left: 345px;
-}
-.frameimgbig {
-    left: 288px;
+ .frameimgbig {
+    left: -50px;
 }
 #headerSub-text{
     margin-left: 105px;
 }
 }
 @media only screen and (max-width: 470px){
-ul li:last-of-type a{
-    color: #292b3f;
-    font-size: 12px;
-}
+
 ul li:last-of-type {
     text-align: left;
     padding-top: 23px;
+    color: seashell;
+    font-size: 12px;
 }
 .frameimgbig {
-    left: 170px;
-    } 
+    left: -150px;
+    }
 .frameimgsmall {
-    top: -5px;
-    left: 269px; 
+    top: -30px;
+    left: -5px;
     height: 30px;
     width: 25px;
 }
@@ -308,22 +327,29 @@ ul.show, .hamburger{
     margin-left: 0;
 }
 #headerSub-text{
-    margin-left: 6px; 
+    margin-left: 6px;
     font-size: 17px;
 }
 }
 
 /* ABOUT */
-#about {
-    height: 100vh;
+#about, #aboutCs{
+    /* display: flex;
+    align-items: center; */
+    min-height: 100vh;
     position: relative;
-    padding-bottom: 30px;
+    /* padding-bottom: 30px; */
+    /* padding-bottom: 70px; */
+    padding: 70px 0;
 }
-.aboutsub-half1 pre{
-    padding-top: 60px;
-    margin-left: 80px;
-   padding-bottom: 30px;
-    font-size: 34px;
+/* #aboutCs .aboutsub-half img {
+    top: 750px;
+} */
+.aboutsub-half1 pre {
+    padding: 50px 0 30px;
+    /* margin-left: 80px; */
+    margin: auto;
+    font-size: 32px;
 }
 .aboutsub-half img {
     position: absolute;
@@ -336,11 +362,14 @@ ul.show, .hamburger{
     font-size: 25px;
     margin-top: 15px;
 }
-#about i {
+#about .up,#aboutCs .up {
+    margin-top: -56px;
+}
+#about i, #aboutCs i {
     color: darkorange;
 }
-#about i:hover, #projects i:hover {
-    color: #1c1d25;
+#about i:hover, #projects i:hover, #aboutCs i:hover {
+    color: #69a070;
 }
 pre span {
     color: darkred;
@@ -348,229 +377,306 @@ pre span {
 .blue {
     color: cadetblue;
 }
-.copy {
+
+    .aboutsub-half2 {
     display: none;
 }
+
+.svetlik {
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+}
+
+.mistr {
+    font-size: 12px;
+    margin-left: 0;
+    padding: 0;
+    /* padding: 0 0 10px 0; */
+}
+
+#about .mistr, #aboutCs .mistr {
+    /* font-size: 14px; */
+    color: darkcyan;
+}
+
 @media only screen and (max-width: 1405px) {
-.aboutsub-half1 pre{
+    .aboutsub-half1 pre{
     font-size: 30px;
 }
-.aboutsub-half img {
+    .aboutsub-half img {
     width: 250px;
 }
 }
 @media only screen and (max-width: 1200px) {
-.aboutsub-half1 pre{
+    .aboutsub-half1 pre{
     font-size: 25px;
     padding-top: 140px;
 }
-.aboutsub-half img {
+    .aboutsub-half img {
     top: 30px;
     right: 30px;
     width: 220px;
 }
-.aboutsub-half1  pre {
-    font-size:22px;
-}
 }
 @media only screen and (max-width: 900px) {
-.aboutsub-half img {
+    .aboutsub-half img {
     width: 150px;
 }
-} 
-@media only screen and (max-width: 730px) {
- #about {
-    height: 80vh;
+.aboutsub-half1  pre {
+    font-size:22px;
+    margin-left: 30px;
+
 }
-    
+
+}
+@media only screen and (max-width: 730px) {
+
 .aboutsub-half img {
     width: 120px;
 }
 .aboutsub-half1 pre{
     font-size:16px;
-    padding-left: 20px;
-    margin-left: 10px;
+    padding-left: 10px;
+    margin-left: 30px;
 }
 }
+@media only screen and (max-width: 550px) {
+    .aboutsub-half1 pre{
+    margin-left: 0px;
+    font-size:15px;
+
+}
+}
+
 @media only screen and (max-width: 490px) {
     .aboutsub-half1 {
     display: none;
 }
-.aboutsub-half2 {
+    .aboutsub-half2 {
     display: block;
-    font-size: 14px;
-    padding: 100px 0 0 8px;
+    font-size: 16px;
+    padding: 100px 0 0 22px;
 }
-.aboutsub-half img {
+    .aboutsub-half img {
     top: 30px;
     right: 0px;
 }
 }
-@media only screen and (max-width: 350px) {
-.aboutsub-half img {
+
+
+@media only screen and (max-width: 385px) {
+    .aboutsub-half img {
     top: 40px;
     width: 90px;
 }
+.aboutsub-half2 {
+    padding: 100px 0 0 8px;
+    font-size: 14px;
+
 }
+}
+
+@media only screen and (max-width: 340px) {
+    .svetlik {
+        left: 10px;
+    }
+    
+}
+
     /* PROJECTS */
-#projects {
-    height: 100vh;
+#projects, #projectsCs {
     background-color: darkcyan;
     position: relative;
+}
+
+.projectBoxOne,.projectBoxTwo {
+    padding-bottom: 190px;
+    display: flex;
+    justify-content:space-around;
 }
 
 #projects .up {
     position: absolute;
     top:0px;
+    color: black;
 }
-#projects h2 {
-    font-size: 40px;
+#projects h2, #projectsCs h2 {
+    font-size: 50px;
+    color: seashell;
+    text-align: center;
+    letter-spacing: 50px;
+    padding: 50px 0 70px;
+}
+#projects h3, #projectsCs h3 {
+    font-size: 30px;
     color: seashell;
     text-align: center;
     letter-spacing: 40px;
-    padding: 30px 0 60px;
+    padding: 20px 0 80px;
 }
-#projectPic{
-    height: 500px;
-    width: 800px;
+.projectPic{
+    height: 350px;
+    width: 600px;
     background-color: #fff;
-    background-size:auto;
+    background-size:cover;
     margin: 10 5px;
     box-shadow: 5px 5px 20px rgb(197, 195, 195);
 }
-#projectInfo{
-    height: 500px;
-    width: 300px;
+.projectInfo{
+    height: 350px;
+    width: 200px;
     background-color: #fff;
-    font-size: 25px;
     font-family: monospace;
 }
-#projectInfo p {
+.projectInfo p {
     padding: 8px;
-}
-#projectBox {
-    padding: 5px;
-    display: flex;
-    justify-content:space-around;
-}
-@media only screen and (max-width: 1330px) {
-#projects {
-        height: 130vh;
-    }
-#projectBox {
-    padding: 5px;
-    display: block;
-}
-#projectInfo {
-    width: 800px;
-    height: 250px;
+    font-size: 18px;
 }
 
-#projectPic, #projectInfo {
+@media only screen and (max-width: 1330px) {
+.projectBox {
+    padding: 5px;
+}
+.projectBoxOne {
+    flex-direction: column;
+}
+.projectBoxTwo {
+    flex-direction: column-reverse;
+}
+.projectInfo {
+    width:600px;
+    height: 160px;
+}
+
+.projectPic, .projectInfo {
     margin: 10px auto;
 }
-}
-@media only screen and (max-width: 960px) {
-   
-#projects h2 {
-    letter-spacing: 30px;
+#projects h3, #projectsCs h3 {
+    letter-spacing: 20px;
     font-size: 30px;
 }
 
-#projectPic img {
-    width: 600px;
-    height: 380px;
 }
-#projectPic {
-    width:600px;
-    height: 380px;
+@media only screen and (max-width: 960px) {
+
+    #projects h2, #projectsCs h2 {
+    letter-spacing: 40px;
+    font-size: 40px;
 }
-#projectInfo {
-    width:600px;
-    height: 260px;
-}
+
 }
 @media only screen and (max-width: 730px){
-    #projects .up {
-    display: none;
-    }
-    
- #projects {
-    height: 80vh;
-    }
-#projectPic img {
+
+.projectPic,.projectPic img {
     width: 400px;
     height: 200px;
 }
-#projectPic {
-    width:400px;
-    height: 200px;
-}
-#projectInfo {
+.projectInfo {
     width:400px;
     height: 180px;
 }
-#projectInfo p {
-    font-size: 20px;
+.projectInfo p {
+    font-size: 18px;
 }
+#projects h3, #projectsCs h3 {
+    letter-spacing: 12px;
+    font-size: 22px;
 }
+
+}
+
 @media only screen and (max-width: 540px){
-#projectPic img {
+.projectPic img {
     width: 300px;
     height: 160px;
 }
-#projectPic {
+.projectPic {
     width:300px;
     height: 160px;
 }
-#projectInfo {
+.projectInfo {
     width:300px;
     height: 220px;
 }
-#projectInfo p {
-    font-size: 18px;
+.projectInfo p {
+    font-size: 16px;
 }
-#projects h2 {
+#projects h3, #projectsCs h3 {
+    letter-spacing: 8px;
+    font-size: 21px;
+}
+#projects h2, #projectsCs h2 {
     letter-spacing: 20px;
+    font-size: 25px;
 }
+
 }
 @media only screen and (max-width: 430px){
-#projectPic img {
+.projectPic img {
     width: 290px;
     height: 160px;
 }
-#projectPic {
+.projectPic {
     width:290px;
     height: 160px;
 }
-#projectInfo {
+.projectInfo {
     width:290px;
     height: 160px;
 }
-#projectInfo p {
-    font-size: 16px;
+.projectInfo p {
+    font-size: 14px;
 }
 
 }
 /* CONTACT */
-
-footer {
+      #contactCs, #contact{
+    position: relative;
     background-color:#1c1d25;
     font-family: 'Roboto Slab', serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: seashell;
+    text-align: center;
+    align-items: center;
 }
-
+.footbox {
+    margin: auto 0;
+}
+#topfoot, #topfootCs {
+    /* display: flex;
+    align-items: center; */
+    /* height: 50%; */
+    padding-bottom: 10%;
+} 
 footer .up {
-    display: none;
+    top: 15px;
 }
 #infobox {
    display: flex;
    flex-direction: column;
-   padding: 60px 0;
-   font-size: 30px;
    color: seashell;
-   line-height: 80px;
    text-align: center;
+   align-items: center;
 }
+.foothead h2 {
+/* padding: 80% 0 0; */
+align-items:center;
+font-size: 50px;
+}
+
+#contact span {
+    font-size: 20px;
+   /* padding-bottom: 70%; */
+
+}
+
+#kontaktspan {
+     height: 50%;
+}
+
 
 @media only screen and (max-width: 1030px) {
         footer .up {
@@ -581,4 +687,17 @@ footer .up {
     #infobox {
         font-size: 20px;
     }
+    #contact .mistr, #contactCs .mistr {
+      font-size: 11px;
+      padding: 0 30px 10px;
+    }
 }
+
+@media only screen and (max-width: 380px){
+    #contact .mistr, #contactCs .mistr {
+        font-size: 10px;
+        padding: 0 50px 10px;
+    }
+    
+  }
+  
